@@ -1,0 +1,169 @@
+@use "global" as *;
+
+.header {
+    height: rem(80);
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    background-color: #061C42;;
+    @include mq(md) {
+        height: rem(100);
+    }
+}
+.header__container{
+    @include mq(md) {
+        height:inherit;
+        padding-top:14px;
+    }
+}
+.header__inner {
+    height:inherit;
+    padding: 0rem calc(max(.937vw,.937rem)) 0 calc(max(.937vw,.937rem));
+    @include mq(md) {
+        // display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(0) rem(20) 0 rem(40);
+        margin: auto;
+    }
+}
+.header__inner.is-active{
+    
+}
+.header__logo{
+    
+}
+.header__left {
+    display:none;
+    // display:flex;
+    // justify-content: space-between;
+    // align-items:center;
+    // height:inherit;
+    // @include mq(md) {
+    //     justify-content: unset;
+    // }
+}
+.header__content{
+    margin-left: auto;
+}
+.header__title {
+   color:#fff;
+    @include mq(md) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: rem(20);
+        font-weight: bold;
+    }
+}
+.header__subTitle{
+    color:#fff;
+    @include mq(md) {
+        font-size: rem(32);
+        font-weight: bold;
+        margin-top:rem(-12);
+    }
+}
+.header__right {
+   background-color:#EBEBEB;
+   
+}
+.header__items{
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        height: inherit;
+        justify-content:center;
+        height:rem(50);
+     }
+}
+.header__item a {
+    position: relative;
+    display: inline-block; /* リンクをインラインブロック要素に */
+    text-decoration: none; /* 既定の下線を削除 */
+    color: #000; /* リンクのテキスト色 */
+    padding-top: rem(10); /* リンクのパディング（必要に応じて調整） */
+    padding-bottom: rem(10); /* リンクのパディング（必要に応じて調整） */
+    padding-left: min(3.48vw, 3.5rem);
+    padding-right: min(3.48vw, 3.5rem);
+  }
+  
+  .header__item a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* 初期状態では幅0 */
+    height: 2px; /* 下線の太さ */
+    bottom: 0; /* 下線の位置 */
+    left: 50%; /* 左端をリンクの中心に設定 */
+    background-color: #000; /* 下線の色 */
+    transform: translateX(0);
+    transition: all 0.3s ease; /* アニメーションの速度と種類 */
+  }
+  
+  .header__item a:hover::after {
+    width: 100%; /* ホバー時は幅を100%に */
+    left: 0; /* 左端をリンクの端に設定 */
+  }
+  
+.header__item a span{
+    font-size: rem(10);
+    text-align: center;
+}
+.header__drawer > .header__drawer-item{
+    column-gap:rem(6);
+}
+ .header__drawer-background{
+    transition: .3s;
+}
+.header__drawer-background.is-active{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+}
+.header__content {
+    position:absolute;
+    top: rem(104);
+    left:rem(15);
+    height: rem(10);
+    z-index: 999;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    opacity: 0;
+    visibility: hidden;
+ //    transition: .3s;
+    grid-row-gap: 40px;
+    column-gap: rem(16);
+    margin-top: rem(24);
+    @include mq(md) {
+         grid-template-columns: repeat(4,1fr);
+    }   
+ }
+ .header__content.is-active{
+     opacity: 1;
+     width: 100%;
+     visibility: visible;
+     height: 100vh;
+     padding-bottom: rem(120);
+     overflow: scroll;
+     grid-template-rows: rem(242) rem(250) 0;
+ }
+.header__wrapper{
+    @include mq(md) {
+        display:flex;
+        align-items: center;
+        justify-content:space-around;
+    }
+}
+.header__titleArea{
+    @include mq(md) {
+        display:flex;
+        flex-direction: column;
+    }
+}
+ .header__wrapperLeft{
+    @include mq(md) {
+        display:flex;
+    }
+ }

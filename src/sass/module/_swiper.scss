@@ -1,0 +1,8 @@
+@use "global" as *;
+
+
+.swiper-wrapper{
+    @include mq(md) {
+      aspect-ratio: 1440/800;
+    }
+}

@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.copyLight{
+    text-align: center;
+    @include mq(md) {
+        margin-top: rem(32);
+    }
+}
+.copyLight__text{
+    @include mq(md) {
+        font-size: rem(14);
+    }
+}

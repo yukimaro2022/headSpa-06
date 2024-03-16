@@ -1,0 +1,102 @@
+@use "global" as *;
+
+
+footer{
+    background-color:#061C42;
+    color:#fff;
+    @include mq(md) {
+        margin-top: rem(100);//のちに消す
+        padding-top:rem(40);
+        padding-bottom:rem(8);
+    }
+}
+.footer__wrapper{
+    @include mq(md) {
+        display:flex;
+        align-items:center;
+        margin-right:min(1.25vw,1.5rem);
+    }
+}
+.footer__container{
+    @include mq(md) {
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+}
+.footer__sns{
+    @include mq(md) {
+        display: flex;
+        justify-content: center;
+        margin-top:rem(24);
+    }
+}
+.footer__snsItem:nth-child(2){
+    @include mq(md) {
+        margin:0 rem(30)
+    }
+}
+.footer__items{
+    @include mq(md) {
+        margin-top: rem(22);
+        display:flex;
+        justify-content: center;
+    }
+}
+.footer__item{
+    position: relative;
+}
+.footer__item a{
+    display:inline-block;
+    padding: rem(10) min(3.125vw,3.2rem);
+    display: inline-block; /* aタグをインラインブロック要素に */
+    text-decoration: none; /* 既定の下線を削除 */
+
+}
+
+.footer__item:after {
+    content: '';
+    position: absolute;
+    width: 0; /* 初期状態では幅0 */
+    height: 2px; /* 下線の太さ */
+    bottom: -5px; /* 下線の位置 */
+    left: 0; /* 左端をaタグの中心に設定 */
+    background-color: #fff; /* 下線の色 */
+    transition: all 0.3s ease; /* アニメーションの速度と種類 */
+  }
+
+  .footer__item:hover:after {
+    width: 100%; /* ホバー時は幅を100%に */
+    left: 0; /* 左端をaタグの端に設定 */
+    background-color: #fff; /* 下線の色 */
+  }
+
+
+.footer__logo{
+
+    @include mq(md) {
+        max-width: rem(222);
+        width: 100%;
+        height:auto;
+    }
+}
+.footer__logo img{
+    height:100%;
+}
+.footer__snsLink{
+
+    @include mq(md) {
+       max-width: rem(50);
+       width: 100%;
+       display:inline-block; 
+    }
+}
+.footer__title{
+    font-weight: bold;
+    font-size:rem(32);
+}
+.footer__title--smallSize{
+    @include mq(md) {
+       font-size: rem(20); 
+    }
+}

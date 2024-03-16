@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.btn{
+    position: relative;
+    background-color:#FFFAC5;
+    color:#061C42;
+    border-radius:20px 20px;
+    font-weight: 900;
+    
+    @include mq(md) {
+        max-width: rem(250);
+        width: 100%;
+        padding:rem(17) rem(45) rem(17) rem(25);
+    }
+}
+
+.btn:hover {
+    background-color: #061C42; /* ホバー時の背景色を元のテキスト色に */
+    color: #FFFAC5; /* ホバー時のテキスト色を元の背景色に */
+    transition: .5s;
+}
+.btn:hover:before {
+    background-image:url("../images/common/pc-img/icon/arrow-2.webp");
+    transition: .5s;
+}
+.btn:before{
+    content:"";
+    display:inline-block;
+    @include mq(md) {
+        max-width: rem(30);
+        width: 100%;
+        height: -webkit-fill-available;
+        position: absolute;
+        right:rem(8);
+        top:50%;
+        transform:translateY(-50%);
+        z-index: 10;
+        background-image: url("../images/common/pc-img/icon/arrow.webp");
+        background-repeat:no-repeat;
+        background-size:contain;
+    }
+}

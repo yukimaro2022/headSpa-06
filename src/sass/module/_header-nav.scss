@@ -1,0 +1,46 @@
+@use "global" as *;
+.header-nav__items{
+    column-gap:rem(6);
+    top: rem(76);
+    grid-row-gap: 0;
+    left: 0;
+    padding-right: rem(15);
+    @include mq(md) {
+        grid-row-gap:rem(36);
+    }
+}
+.header-nav__item + .header-nav__item{
+    margin-top: rem(18);
+}
+.header-nav__item  a span{
+    font-weight: 700;
+}
+.header-nav__item:nth-child(3){
+    padding-left:rem(23);
+    @include mq(md) {
+        order: 3;
+    }
+}
+.header-nav__item{
+        padding-left: rem(22);
+}
+.header-nav__item + .header__drawer-item {
+        margin-top: rem(24);
+}
+.header-nav__item a{
+    color:$white;
+}
+.header-nav__item:hover{
+    opacity: .5;
+}
+
+.header-nav__item a{
+    display: inline-block;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+}
+.header-nav__item a span{
+    display: inline-block;
+    
+}
