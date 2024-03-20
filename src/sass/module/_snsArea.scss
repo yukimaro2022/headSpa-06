@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.snsArea{
+    display:flex;
+    justify-content: center;
+}
+
+.snsArea__snsItem:nth-of-type(2){
+    margin:0 rem(30);
+}

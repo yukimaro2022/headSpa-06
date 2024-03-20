@@ -4,10 +4,12 @@
 .copyLight{
     text-align: center;
     @include mq(md) {
-        margin-top: rem(32);
+        margin-top: rem(27);
     }
 }
 .copyLight__text{
+    font-size: rem(9);
+    margin-top: rem(29);
     @include mq(md) {
         font-size: rem(14);
     }

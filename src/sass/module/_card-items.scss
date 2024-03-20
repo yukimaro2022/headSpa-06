@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.card-items{
+    max-width: rem(400);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include mq(md) {
+        flex-direction: row;
+        max-width: rem(1057);
+        justify-content: center;
+        gap:min(3.425vw,3.2rem);
+    }
+}

@@ -4,40 +4,54 @@
 footer{
     background-color:#061C42;
     color:#fff;
+    padding-top:rem(22);
+    padding-bottom: rem(24);
     @include mq(md) {
-        margin-top: rem(100);//のちに消す
-        padding-top:rem(40);
+        padding-top:rem(32);
         padding-bottom:rem(8);
     }
 }
-.footer__wrapper{
-    @include mq(md) {
-        display:flex;
-        align-items:center;
-        margin-right:min(1.25vw,1.5rem);
-    }
+.footer__container{
+   @include mq(md) {
+       padding:0 min(9vw, 9.1rem);
+   }
 }
+.footer__wrapper{
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
 .footer__container{
     @include mq(md) {
         display:flex;
-        justify-content:center;
+        justify-content:space-between;
         align-items: center;
     }
 }
 .footer__sns{
+    display: flex;
+    justify-content: center;
+    margin-top: rem(8);
+    margin-bottom:rem(8);
+}
+.footer__left{
+    margin-left:0;
     @include mq(md) {
-        display: flex;
-        justify-content: center;
-        margin-top:rem(24);
-    }
+       margin-left:rem(25);
+   }
 }
 .footer__snsItem:nth-child(2){
-    @include mq(md) {
-        margin:0 rem(30)
-    }
+    margin:0 rem(24)
 }
 .footer__items{
+    text-align: center;
+    max-width: 168px;
+    text-align: left;
+    margin: auto;
     @include mq(md) {
+        max-width: 100%;
         margin-top: rem(22);
         display:flex;
         justify-content: center;
@@ -46,14 +60,18 @@ footer{
 .footer__item{
     position: relative;
 }
+.footer__item:nth-child(n + 2){
+    margin-top:rem(16);
+}
 .footer__item a{
-    display:inline-block;
-    padding: rem(10) min(3.125vw,3.2rem);
     display: inline-block; /* aタグをインラインブロック要素に */
     text-decoration: none; /* 既定の下線を削除 */
-
+    padding: rem(4) min(3.125vw,3.2rem);
+    font-weight: bold;
+    @include mq(md) {
+    padding: rem(10) min(4vw,4.2rem);
+   }
 }
-
 .footer__item:after {
     content: '';
     position: absolute;
@@ -73,10 +91,12 @@ footer{
 
 
 .footer__logo{
-
+    max-width: rem(88);
+    width: 100%;
+    margin-right: rem(10);
     @include mq(md) {
+        margin:auto;
         max-width: rem(222);
-        width: 100%;
         height:auto;
     }
 }
@@ -84,19 +104,62 @@ footer{
     height:100%;
 }
 .footer__snsLink{
-
-    @include mq(md) {
-       max-width: rem(50);
-       width: 100%;
-       display:inline-block; 
-    }
+    width: 100%;
+    max-width: rem(40);
+    display:inline-block;
+}
+.footer__snsLink:hover{
+    opacity: .5;
+}
+.footer__snsLink:nth-child(2){
+    margin:0 rem(24);
+}
+.footer__snsLink img{
+    object-fit: contain;
 }
 .footer__title{
+    font-size: rem(16);
     font-weight: bold;
-    font-size:rem(32);
+    line-height: 1;
+    text-align: left;
+    @include mq(md) {
+        font-size:rem(32);
+    }
 }
 .footer__title--smallSize{
+    font-size: rem(10);
     @include mq(md) {
        font-size: rem(20); 
     }
 }
+.footer__subscription{
+    font-size: rem(14);
+    padding:rem(4) rem(6);
+    text-align: center;
+    @include mq(md) {
+       font-size: rem(24); 
+    }
+}
+.footer__menu{
+    margin-top:rem(20);
+}
+.footer__btn{
+    position: relative;
+    max-width: rem(200);
+    font-size: rem(20);
+    padding: rem(13) rem(16);
+ }
+ .footer__btn:before{
+    content: "";
+    display:inline-block;
+    position: absolute;
+    right: rem(10);
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../images/common/pc-img/drawer/drawer__menu.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(33);
+    height: rem(25);
+ }

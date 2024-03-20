@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 必要に応じて他の要素よりも前面に表示 */
+    /* 追従時のスタイルをここに追加 */
+    
+}

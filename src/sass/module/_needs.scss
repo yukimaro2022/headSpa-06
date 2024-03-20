@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.needs{
+    padding-bottom:rem(32);
+    margin-top: rem(32);
+    @include mq(md) {
+        padding-bottom:rem(51);
+    }
+}
+.needs__card:nth-of-type(4){
+    order: 1;
+    @include mq(md) {
+        order: unset;
+    }
+}
+.needs__card:nth-of-type(3){
+    order: 2;
+    @include mq(md) {
+        order: unset;
+    }
+}
+.needs__card:nth-of-type(2){
+    order: 3;
+    @include mq(md) {
+        order: unset;
+    }
+}
+.needs__card:nth-child(1){
+    order: 4;
+    @include mq(md) {
+        order: unset;
+    }
+}
+
+
+.needs__mainTitle{
+    @include mq(md) {
+        margin-top:rem(40); 
+    }
+}
+.needs__card__radius{
+    border-radius: 40px;
+}
+.needs__card img{
+    aspect-ratio: 220 / 242;
+    object-fit: cover;
+    border-radius: 40px;
+    height:rem(242);
+}

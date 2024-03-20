@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.card-item{
+    display: grid;
+    grid-template-columns: 1fr; /* スマートフォン表示では1列 */
+    // grid-gap: 20px; /* グリッドアイテム間のギャップ */
+    
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr; /* PC表示では2列 */
+        grid-template-areas: 
+          "title image"
+          "text image"; /* タイトルと画像は上、テキストと画像は下 */
+    }
+}
+.card-item:nth-child(2){
+    flex-direction: row-reverse;
+}
+
+.card-item__image{
+    max-width: rem(240);
+    margin:auto;
+   @include mq(md) {
+    grid-area: image; /* 画像の位置 */
+    justify-self: center; /* 中央寄せ */
+    width: 100%; /* 幅の調整 */
+    max-width: 462px; /* 最大幅の設定 */
+   }
+}
+.card-item__image img{
+    height:auto;
+    object-fit: cover;
+}
+.card-item__title{
+    display:flex;
+    margin-top:auto;
+    justify-content: center;
+    height:100%;
+    align-items: center;
+    @include mq(md) {
+        grid-area: title; /* タイトルの位置 */
+        justify-content: flex-start;
+    }
+}
+.card-item__titleMain{
+    font-size: rem(18);
+    color: #fff;
+    margin-bottom:auto;
+    line-height:1.8;
+    @include mq(md) {
+        line-height: 1;
+        font-size: rem(32);
+    }
+}
+.card-item__body{
+    color: #fff;
+    @include mq(md) {
+      padding:rem(16) rem(16) rem(40);
+    }
+}
+
+.card-item__number{
+    margin-right:min(0.86vw,1rem);
+    @include mq(md) {
+        max-width: rem(80);
+        height:auto;
+    }
+}
+.card-item__number img{
+    object-fit: contain;
+    max-width: rem(40);
+    max-width: rem(74);
+    width: 100%;
+    @include mq(md) {
+        max-width: 100%;
+        
+    }
+}
+.card-item__text{
+    font-size: rem(15);
+    line-height:calc(22.5 / 15);
+    color: #fff;
+    margin-top: rem(22);
+    @include mq(md) {
+        margin:0;
+        font-size: rem(16);
+        grid-area: text; /* テキストの位置 */
+    }
+}

@@ -1,0 +1,162 @@
+@use "global" as *;
+
+.character{
+   position: relative;
+   padding-top:rem(21);
+   padding-bottom: rem(58);
+    @include mq(md) {
+        padding-top:rem(26);
+        padding-bottom:rem(47);
+    }
+}
+.character__cards{
+    margin-top: rem(40);
+    // max-width: rem(325);
+    width: 100%;
+    margin: auto;
+    @include mq(md) {
+        margin-top: 0;
+        max-width: rem(1000);
+    }
+}
+.character__card:nth-child(n + 2){
+    margin-top: rem(60);
+   @include mq(md) {
+       margin-top: rem(80);
+   }
+}
+.character:before{
+    content:"";
+    background-image:url("../images/common/pc-img/character/character-back.webp");
+    background-position:center;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:inline-block;
+    z-index: -1;
+}
+
+.character__cards--reverse .card-item__image{
+   margin-left:auto;
+   margin-right:auto;
+}
+.character__title{
+    position: relative;
+}
+.character__title:before{
+    content:"";
+    background-image:url("../images/common/pc-img/character/mokumoku01.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display:inline-block;
+    max-width: rem(290);
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:25%;
+    left: 50%;
+    transform:translateX(-50%);
+    z-index: -1;
+    display: none;
+    @include mq(md) {
+       display:block;
+    }
+}
+.character__mainTitle span{
+    @include mq(md) {
+        text-indent: rem(-40);
+    }
+}
+
+.character__cards--reverse{
+    position: relative;
+}
+.character__cards--reverse:before{
+    content:"";
+    max-width: rem(243);
+    width: 100%;
+    height:100%;
+    background-image:url("../images/common/pc-img/character/mokumoku02.webp");
+    display:inline-block;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right:0;
+    right: rem(-20);
+    top: rem(-100);
+    opacity: .4;
+    @include mq(md) {
+        top:rem(-80);
+    }
+}
+.character__subscription{
+      font-size: rem(27);
+}
+.character__subscription.btn:hover{
+    background-color:#FFFAC5;
+    outline: 3px solid red;
+    color:#333;
+    transition: .5s;
+}
+.character__subscription span{
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}
+.character__btn{
+    text-align: center;
+    margin-top: rem(88);
+    @include mq(md) {
+        margin-top: rem(120);
+        display:flex;
+        justify-content: center;
+    }
+}
+.btn--backgroundBlock{
+    background-color:#061C42;
+    color: #fff;
+}
+
+.character__btn .btn{
+   position: relative;
+}
+.character__btn .btn:before{
+    content: "";
+    display:inline-block;
+    max-width: rem(60);
+    width: 100%;
+    height:rem(60);
+    background-image: url("../images/common/pc-img/icon/SHEEP-IMAGE.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right:rem(16);
+    top:50%;
+    transform: translateY(-50%);
+    @include mq(md) {
+        max-width: rem(70);
+        height:rem(80);
+    }
+}
+
+
+
+.character__card.character__cards--reverse {
+    @include mq(md) {
+        grid-template-areas:
+          "image title"
+          "image text"; /* 画像とタイトルを逆に */
+      }  
+    }
+    
+      
+  
+  

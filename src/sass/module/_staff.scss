@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.staff{
+    padding-top:rem(16);
+    padding-bottom:rem(27);
+    @include mq(md) {
+        padding-bottom:rem(34);
+    }
+}
+.staff__cards{
+    margin-top: rem(28);
+    @include mq(md) {
+        margin-top: rem(-20);
+    }
+}
+.staff__card:nth-child(n + 2){
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+.staff__btn{
+    margin-top: rem(22);
+    text-align: center;
+}
+.staff__subscription{
+    position: relative;
+    // max-width: rem(240);
+    font-size: rem(27);
+    @include mq(md) {
+        line-height: 1.1;
+        // max-width: rem(303);
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: auto;
+    }
+}
+
+.staff__subscription.btn:before{
+    content: "";
+    background-image: url("../images/common/pc-img/icon/SHEEP-IMAGE-2.webp");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: rem(16);
+    top: 50%;
+    transform: translateY(-50%);
+    width:rem(60);
+    height:rem(60);
+    max-width:100%;
+    @include mq(md) {
+        width: rem(70);
+        height:rem(70);
+    }
+}
+.staff__subscription.btn:hover{
+    background-color:#FFFAC5;
+    color:#333;
+}
+
+.staff__subscription:hover:before {
+    background-image: url(../images/common/pc-img/icon/SHEEP-IMAGE.webp);
+}

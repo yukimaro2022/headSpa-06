@@ -1,0 +1,73 @@
+@use "global" as *;
+
+
+.section-title{
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    @include mq(md) {
+        flex-direction: row-reverse;
+       justify-content: flex-end;
+    }
+}
+.section-title__main{
+        font-size: rem(20);
+    @include mq(md) {
+        font-size: rem(36);
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        margin-top: rem(-40);
+    }
+}
+.section-title__main span{
+    position: relative;
+    display:inline-block;
+    padding-bottom:rem(10);
+    @include mq(md) {
+        text-indent: rem(-45);
+    }
+}
+
+.section-title__main span:before{
+    content:"";
+    display:inline-block;
+    width:24%;
+    height:rem(3);
+    background: #333;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.section-title__sub{
+    font-weight: bold;
+    @include mq(md) {
+       font-size: rem(24);
+       line-height: calc(22.5 / 32);
+       writing-mode: vertical-lr;
+       letter-spacing: .08em;
+    }
+}
+.section-title__sub span{
+    display:inline-block;
+    margin-right:rem(8);
+    padding-right:rem(8);
+    padding-left:rem(8);
+    border-right:1px solid;
+    @include mq(md) {
+        border-bottom:3px solid;
+        border-right:unset;
+        padding-bottom:rem(8);
+        margin-bottom:rem(16);
+    }
+}
+
+
+.section-title--white{
+    color:#fff;
+}
+.section-title--white.character__title span:before{
+    background-color:#fff;
+}

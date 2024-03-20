@@ -23,6 +23,9 @@
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
   <!-- JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -35,7 +38,7 @@
         <div class="header__wrapper">
           <div class="header__wrapperLeft">
             <figure class="header__logo">
-              <img width="122" height="50" loading="lazy" src="../assets/images/common/pc-img/logo/logo.webp" alt="癒し〜ぷロゴ">
+              <img width="200" height="100" loading="lazy" src="../assets/images/common/pc-img/logo/logo.webp" alt="癒し〜ぷロゴ">
             </figure>
             <div class="header__titleArea">
               <h1 class="header__title">ドライヘッドスパ専門店癒し～ぷ</h1>
@@ -44,6 +47,13 @@
           </div>
           <div class="header__wrapperRight">
            <a href="" class="btn header__subscription">ご予約はコチラ</a>
+          </div>
+          <div class="header__drawer drawer">
+            <div class="drawer__btns">
+              <span class="drawer__btn drawer__btn--1"></span>
+              <span class="drawer__btn drawer__btn--2"></span>
+              <span class="drawer__btn drawer__btn--3"></span>
+            </div>
           </div>
         </div>
         <div class="header__left">
@@ -59,6 +69,15 @@
       </div>
     </div>
     <div class="header__content header-nav">
+      <div class="header__wrapperLeft header-drawer__title">
+        <figure class="header__logo">
+          <img width="200" height="100" loading="lazy" src="../assets/images/common/pc-img/logo/logo.webp" alt="癒し〜ぷロゴ">
+        </figure>
+        <div class="header__titleArea">
+          <h1 class="header__title">ドライヘッドスパ専門店癒し～ぷ</h1>
+          <h2 class="header__subTitle">プラトンホテル四日市店</h2>
+        </div>
+      </div>
       <ul class="header-nav__items">
         <li class="header-nav__item  icon">
           <a href="#">
@@ -86,9 +105,30 @@
           </a>
         </li>
       </ul>
-      
+      <div class="header__btnArea">
+        <a href="" class="btn header__btn">ご予約はコチラ</a>
+      </div>
+      <ul class="header__sns snsArea">
+        <li class="snsArea__snsItem">
+          <a href="" class="footer__snsLink">
+            <img width="50" height="50" loading="lazy" src="../assets/images/common/pc-img/sns-icon/instagram.webp" alt="インスタグラムアイコン">
+          </a>
+        </li>
+        <li class="snsArea__snsItem">
+          <a href="" class="footer__snsLink">
+            <img width="50" height="50" loading="lazy" src="../assets/images/common/pc-img/sns-icon/line.webp" alt="ラインアイコン">
+          </a>
+        </li>
+        <li class="snsArea__snsItem">
+          <a href="" class="footer__snsLink">
+            <img width="50" height="50" loading="lazy" src="../assets/images/common/pc-img/sns-icon/hotpepper.webp" alt="ホットペッパービューティー">
+          </a>
+        </li>
+      </ul>
+     
     </div>
     <div class="header__right">
+      
         <ul class="header__items">
           <li class="header__item"><a href="home">トップページ</a></li>
           <li class="header__item"><a href="#price">料金について</a></li>
@@ -105,9 +145,9 @@
         <!-- Slider main container -->
         <div class="top__title">
           <h3 class="top__titleSub"><span>近鉄四日市駅から徒歩2分</span></h3>
-          <h4 class="top__titleMain">極楽睡眠<br>ドライヘッドスパ</h4>
-          <p class="top__text">「家でもない。 職場でもない、癒しのサードプレイス」<br>
-            看護師考案の技術であたまとこころに極上の「癒し」を与え、<br>お疲れ知らずのあなたに導くサロンです。
+          <h4 class="top__titleMain">極楽睡眠<br class="u-mobile">ドライヘッドスパ</h4>
+          <p class="top__text">「家でもない。 職場でもない、癒しのサードプレイス」<br class="u-desktop">
+            看護師考案の技術であたまとこころに極上の「癒し」を与え、<br class="u-desktop">お疲れ知らずのあなたに導くサロンです。
             </p>
         </div>
         <div class="top__swiper swiper js-top-swiper">
@@ -146,14 +186,14 @@
       <div class="needs__inner inner">
         <div class="needs__title section-title">
           <h2 class="needs__mainTitle section-title__main"><span>こんなお悩みありませんか？</span></h2>
-          <p class="needs__subTitle section-title__sub">01<span>NEEDS</span></p>
+          <p class="needs__subTitle section-title__sub"><span>01</span>NEEDS</p>
         </div>
         <ul class="needs__cards cards">
           <li class="needs__card card">
             <figure>
               <img width="220" height="220" loading="lazy" src="../assets/images/common/pc-img/needs/needs01.webp" alt="女性が枕で落ち込んでいるイメージ">
             </figure>
-            <p class="card__textt">緊張型頭痛、眼精疲労など仕事で家事で溜まった疲れを癒したい。</p>
+            <p class="card__text">緊張型頭痛、眼精疲労など仕事で家事で溜まった疲れを癒したい。</p>
           </li>
           <li class="needs__card card">
             <figure>
@@ -168,9 +208,10 @@
             <p class="card__text">パソコンやスマホを頻繁に見るため、毎日のように目に疲労を感じる</p>
           </li>
           <li class="needs__card card">
-            <figure>
-              <img width="220" height="220" loading="lazy" src="../assets/images/common/pc-img/needs/needs04.webp" alt="頭痛がして頭が痛い女性のイメージ">
-            </figure>
+            <picture class="needs__card__image">
+              <source srcset="../assets/images/common/pc-img/needs/needs04.webp" media="(min-width:768px)" type="image/jpg">
+              <img class="needs__card__radius" width="220" height="220" loading="lazy" src="../assets/images/common/sp-img/needs/needs-sp01.webp" alt="頭痛がして頭が痛い女性のイメージ">
+            </picture>
             <p class="card__text">自律神経の乱れが多く、無性にイライラしたり、気持ちがモヤモヤする。</p>
           </li>
         </ul>
@@ -179,58 +220,55 @@
 
     <section class="character">
       <div class="character__inner inner">
-        <div class="character__title section-title">
+        <div class="character__title section-title section-title--white">
           <h2 class="character__mainTitle section-title__main"><span>ドライヘッドスパの特徴</span></h2>
-          <p class="character__subTitle section-title__sub">02<span>CHARACTER</span></p>
+          <p class="character__subTitle section-title__sub"><span>02</span>CHARACTER</p>
         </div>
         <ul class="character__cards cards-item">
-          <li class="character__cards cards-item">
-            <figure>
-              <img width="462" height="344" loading="lazy" src="../assets/images/common/pc-img/character/character01.webp" alt="ヘッドマッサージを受けている女性のイメージ">
-            </figure>
-            <div class="cards-item__body">
-              <div class="cards-item__title">
-                <figure>
-                  <img width="80" height="80" loading="lazy" src="../assets/images/common/pc-img/icon/character-no1.webp" alt="特徴no1">
+          <li class="character__card card-item character__cards--reverse">
+            <div class="card-item__title">
+                <figure class="card-item__number">
+                    <img width="80" height="80" loading="lazy" src="../assets/images/common/pc-img/icon/character-no1.webp" alt="特徴no1">
                 </figure>
-                <h3 class="cards-item__titleMain">自律神経を整え睡眠の質を向上させる</h3>
-                <p class="cards-item__text">ドライヘッドスパは、より深いリラックスと快眠を促すことが目的です。頭皮からしっかり重点的にほぐすことで、血行を促進し、自律神経のバランスが整いやすくなります。よりリラックスでき、疲れた脳を癒し、その場で眠りに落ちる上、整った自律神経のおかげで、快眠を促します。</p>
-              </div>
+                <h3 class="card-item__titleMain">自律神経を整え<br>睡眠の質を向上させる</h3>
             </div>
-          </li>
-          <li class="character__cards cards-item">
-            <figure>
-              <img width="462" height="344" loading="lazy" src="../assets/images/common/pc-img/character/character03.webp" alt="首のマッサージを受けているがイメージ">
+            <figure class="card-item__image">
+                <img width="462" height="344" loading="lazy" src="../assets/images/common/pc-img/character/character01.webp" alt="ヘッドマッサージを受けている女性のイメージ">
             </figure>
-            <div class="cards-item__body">
-              <div class="cards-item__title">
-                <figure>
-                  <img width="80" height="80" loading="lazy" src="../assets/images/common/pc-img/icon/character-no2.webp" alt="特徴no1">
-                </figure>
-                <h3 class="cards-item__titleMain">ストレス解消・疲労回復
-                  癒し空間でまったり</h3>
-                <p class="cards-item__text">癒し~ぶでは、ドライヘッドスパのコースでも首肩やデコルテ、背中の筋肉までほぐしゆるめてまいります。頭皮をほぐすことで首肩こりが楽になったり、ボディをほぐすことで、頭皮のこりがほぐれ、自律神経のバランスが整いやすくなります。</p>
-              </div>
-            </div>
-          </li>
-          <li class="character__cards cards-item character__cards--reverse">
-            <figure>
-              <img width="462" height="344" loading="lazy" src="../assets/images/common/pc-img/character/character03.webp" alt="首のマッサージを受けているがイメージ">
+            <p class="card-item__text">ドライヘッドスパは、より深いリラックスと快眠を促すことが目的です。頭皮からしっかり重点的にほぐすことで、血行を促進し、自律神経のバランスが整いやすくなります。よりリラックスでき、疲れた脳を癒し、その場で眠りに落ちる上、整った自律神経のおかげで、快眠を促します。</p>
+        </li>
+        
+        <li class="character__card card-item">
+          
+          <div class="card-item__title">
+            <figure class="card-item__number">
+              <img width="80" height="80" loading="lazy" src="../assets/images/common/pc-img/icon/character-no02.webp" alt="特徴no2">
             </figure>
-            <div class="cards-item__body">
-              <div class="cards-item__title">
-                <figure>
-                  <img width="80" height="80" loading="lazy" src="../assets/images/common/pc-img/icon/character-no3.webp" alt="特徴no1">
-                </figure>
-                <h3 class="cards-item__titleMain">美容や健康効果究極のリラクゼーション</h3>
-                <p class="cards-item__text">当店はドライヘッドスパだけではなく、フェイシャルや酸素カプセル導入。リラクゼーションやヒーリング効果だけでなく、頭痛や眼精疲労・不眠症の改善など健康面への効果、顔のリフトアップやデトックスといった美容効果も期待して頂けます。</p>
-              </div>
-            </div>
-          </li>
+            <h3 class="card-item__titleMain">ストレス解消・疲労回復<br>癒し空間でまったり</h3>
+          </div>
+          <figure class="card-item__image">
+            <img width="462" height="344" loading="lazy" src="../assets/images/common/pc-img/character/character02.webp" alt="首のマッサージを受けている女性のイメージ">
+          </figure>
+            <p class="card-item__text">癒し~ぶでは、ドライヘッドスパのコースでも首肩やデコルテ、背中の筋肉までほぐしゆるめてまいります。<br>頭皮をほぐすことで首肩こりが楽になったり、ボディをほぐすことで、頭皮のこりがほぐれ、自律神経のバランスが整いやすくなります。</p>
+      </li>
+      
+      <li class="character__card card-item character__cards--reverse">
+        <div class="card-item__title">
+          <figure class="card-item__number">
+            <img width="80" height="80" loading="lazy" src="../assets/images/common/pc-img/icon/character-no03.webp" alt="特徴no3">
+          </figure>
+          <h3 class="card-item__titleMain">美容や健康効果<br>究極のリラクゼーション</h3>
+        </div>
+        <figure class="card-item__image">
+          <img width="462" height="344" loading="lazy" src="../assets/images/common/pc-img/character/character03.webp" alt="首のマッサージを受けている女性のイメージ">
+        </figure>
+        <p class="card-item__text">当店はドライヘッドスパだけではなく、フェイシャルや酸素カプセル導入。リラクゼーションやヒーリング効果だけでなく、頭痛や眼精疲労・不眠症の改善など健康面への効果、顔のリフトアップやデトックスといった美容効果も期待して頂けます</p>
+    </li>
+    
           
         </ul>
         <div class="character__btn">
-          <a href="" class="btn character__subscription"><span>プラトンホテル四日市店</span>ご予約はコチラ</a>
+          <a href="" class="btn character__subscription"><span>プラトンホテル四日市店<br></span>ご予約はコチラ</a>
         </div>
       </div>
     </section>
@@ -238,46 +276,64 @@
     <section class="staff">
       <div class="staff__inner inner">
         <div class="staff__title section-title">
-          <h2 class="staff__mainTitle section-title__main"><span>こんなお悩みありませんか？</span></h2>
-          <p class="staff__subTitle section-title__sub">01<span>NEEDS</span></p>
+          <h2 class="staff__mainTitle section-title__main"><span>癒し～ぷ<br class="u-desktop">四日市店のスタッフ紹介</span></h2>
+          <p class="staff__subTitle section-title__sub"><span>03</span>STAFF</p>
         </div>
         <ul class="staff__cards card-items">
-          <li class="staff__card card">
+          <li class="staff__card cardItem">
             <figure>
               <img width="300" height="360" loading="lazy" src="../assets/images/common/pc-img/staff/staff1.webp" alt="男性が腕を組んで空を見上げているイメージ">
             </figure>
-            <div class="card__info">
-              <h3 class="card__titleEn">OUYAMA<br>NOBORU</h3>
-              <h4 clas="card__titleJa">黄山 昇</h4>
+            <div class="cardItem__info">
+              <h3 class="cardItem__titleEn">OUYAMA<br>NOBORU</h3>
+              <h4 class="cardItem__titleJa">黄山 昇</h4>
             </div>
           </li>
-          <li class="staff__card card">
+          <li class="staff__card cardItem">
             <figure>
               <img width="300" height="360" loading="lazy" src="../assets/images/common/pc-img/staff/staff2.webp" alt="女性が室内から外の窓を見ている様子のイメージ">
             </figure>
-            <div class="card__info">
-              <h3 class="card__titleEn">OUYAMA<br>YURI</h3>
-              <h4 clas="card__titleJa">黄山 悠里</h4>
+            <div class="cardItem__info">
+              <h3 class="cardItem__titleEn">OUYAMA<br>YURI</h3>
+              <h4 class="cardItem__titleJa">黄山 悠里</h4>
             </div>
           </li>
-          <li class="staff__card card">
+          <li class="staff__card cardItem">
             <figure>
               <img width="300" height="360" loading="lazy" src="../assets/images/common/pc-img/staff/staff3.webp" alt="女性が室内から外の窓を見ている様子のイメージ">
             </figure>
-            <div class="card__info">
-              <h3 class="card__titleEn">OUYAMA<br>NOBORU</h3>
-              <h4 clas="card__titleJa">黄山 昇</h4>
+            <div class="cardItem__info">
+              <h3 class="cardItem__titleEn">OUYAMA<br>NOBORU</h3>
+              <h4 class="cardItem__titleJa">黄山 昇</h4>
             </div>
           </li>
         </ul>
-        <div class="character__btn">
-          <a href="" class="btn character__subscription"><span>プラトンホテル四日市店</span>ご予約はコチラ</a>
+        <div class="staff__btn">
+          <a href="" class="btn btn--backgroundBlock staff__subscription"><span>プラトンホテル四日市店</span>料金について</a>
         </div>
       </div>
     </section>
+
+    <section class="introduction">
+      <div class="introduction__inner inner">
+        <div class="introduction__title section-title section-title--white">
+          <h2 class="introduction__mainTitle section-title__main"><span>施術の様子</span></h2>
+          <p class="introduction__subTitle section-title__sub"><span>04</span>INTRODUCTION</p>
+        </div>
+        <div class="introduction__wrapper">
+          <div class="introduction__body">
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/b7y5akWsNK0?si=iEUxvs_WlKyofjcJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="introduction__textArea">
+            <p class="introduction__text">当店はドライヘッドスパだけではなく、フェイシャルや酸素カプセル導入。リラクゼーションやヒーリング効果だけでなく、頭痛や眼精疲労・不眠症の改善など健康面への効果、顔のリフトアップやデトックスといった美容効果も期待して頂けます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer>
-    <div class="footer__inner">
+    <div class="footer__inner inner">
       <div class="footer__container">
         <div class="footer__left">
           <div class="footer__wrapper">
@@ -306,7 +362,7 @@
           </ul>
         </div>
       <div class="footer__subscription">
-          <a href="" class="btn footer__subscription">ご予約はコチラ</a>
+          <a href="" class="btn footer__btn">ご予約はコチラ</a>
       </div>
       </div>
         <div class="footer__menu">
@@ -321,7 +377,7 @@
           </div>
         </div>
       <div class="copyLight">
-        <p class="copyLight__text">2024 ドライヘッドスパ専門店癒し～ぷ プラトンホテル四日市店 All right reserved</p>
+        <p class="copyLight__text">2024ドライヘッドスパ専門店癒し～ぷプラトンホテル四日市店Allright reserved</p>
       </div>
     </div>
   </footer>

@@ -1,0 +1,28 @@
+@use "global" as *;
+
+
+
+.card__text{
+    margin-top: rem(10);
+    font-size: rem(14);
+    letter-spacing: .08em;
+    @include mq(md) {
+        margin-top: rem(22);
+        font-size: rem(16);
+        line-height:calc(22.5 / 16);
+    }
+}
+.card {
+    /* カードのスタイル設定 */
+    transition: transform 0.3s ease; /* 必要に応じて調整 */
+    cursor: pointer; /* ホバー時にカーソルを指に */
+}
+
+.card img {
+    width: 100%; /* 画像がfigure要素に収まるように設定 */
+    transition: transform 0.3s ease; /* スムーズな拡大/縮小のためのトランジション */
+}
+
+.card:hover img {
+    transform: scale(1.1); /* 画像を10%拡大 */
+}

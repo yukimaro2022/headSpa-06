@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.introduction{
+    position: relative;
+    padding-top:rem(24);
+    padding-bottom:rem(40);
+    @include mq(md) {
+        padding-bottom:rem(84)
+    }
+}
+.introduction__body iframe{
+        width:100%;
+        aspect-ratio: 358 / 179;
+        height: 100%;
+        @include mq(md) {
+            aspect-ratio: 1000 / 500;
+        }
+}
+.introduction__mainTitle{
+    @include mq(md) {
+        margin-bottom:auto;
+        padding-top:rem(72);  
+    }
+}
+.introduction__title.section-title span:before{
+    background-color: #fff;
+    width:75%
+}
+.introduction:before{
+    content:"";
+    background-image:url("../images/common/pc-img/introduction/fv-bg-pc2.webp");
+    background-position:center;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:inline-block;
+    z-index: -1;
+}
+.introduction:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* ここでマスクの色と透明度を調整 */
+    z-index: -1;
+}
+.introduction__wrapper{
+    margin-top: rem(31);
+    @include mq(md) {
+        max-width: rem(1000);
+        text-align: center;
+        margin:rem(-170) auto 0;
+    }
+}
+.introduction__textArea{
+margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(48);
+        padding:0 rem(150);
+    }
+}
+.introduction__text{
+    font-size: rem(15);
+    color:#fff;
+    line-height: calc(22.5 / 16);
+   @include mq(md) {
+       font-size: rem(16);
+   }
+}

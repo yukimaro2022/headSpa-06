@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.cards{
+  // max-width: rem(240);
+  grid-template-columns: repeat(1, min(73vw, 78rem));
+  display: grid;
+  justify-content: center;
+  gap: min(3.25vw, 3.5rem); /* カード間のスペース */
+  margin: rem(24) auto 0;
+  @include mq(sm) {
+    grid-template-columns: repeat(2, 220px);
+  }
+   @include mq(md) {
+        // grid-template-columns: repeat(4, 220px); /* 必要に応じてコメントを外してください */
+        grid-template-columns: repeat(2, 220px);
+        margin: rem(-24) auto 0;
+      }
+      
+      @include mq(lg) {
+    margin: rem(-24) auto 0;
+    grid-template-columns: repeat(4, 220px);
+  }
+}
+
+.character__inner{
+  position: relative;
+}
+.character__inner:after{
+  content:"";
+  display:inline-block;
+  background-image: url("../images/common/pc-img/character/mokumoku03.webp");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left:rem(26);
+  bottom:0;
+  z-index: -1;
+  width:rem(250);
+  height:rem(176);
+  @include mq(md) {
+    bottom:rem(100);
+    
+  }
+}
