@@ -17,7 +17,7 @@
         width: 100%;
         font-size: rem(27);
         line-height: 1.12;
-        padding:rem(19) rem(56) rem(17) rem(22);
+        padding:rem(15) rem(56) rem(15) rem(30);
     }
 }
 .btn span{
@@ -46,7 +46,7 @@
         top:50%;
         transform:translateY(-50%);
         z-index: 10;
-        background-image: url("../images/common/pc-img/icon/arrow.webp");
+        background-image: url("../images/common/pc-img/drawer/drawer__menu.webp");
         background-repeat:no-repeat;
         background-size:contain;
     }

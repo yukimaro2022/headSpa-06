@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.space{
+    position: relative;
+    padding-top:rem(40);
+    padding-bottom: rem(40);
+    @include mq(md) {
+        padding-top: rem(40);
+        padding-bottom: rem(105);
+    }
+}
+.space:before{
+    content:"";
+    background-image:url("../images/common/pc-img/character/character-back.webp");
+    background-position:center;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:inline-block;
+    z-index: -1;
+}
+.space__cards{
+    text-align: center;
+    margin:rem(24) auto 0; 
+    width: 100%;
+    max-width: rem(450); 
+    
+    @include mq(md) {
+      max-width: rem(969);  
+    }
+}
+.space__card {
+  display: grid;
+  color: $white;
+  overflow: hidden; /* 子要素がはみ出さないように設定 */
+  transition: transform 0.3s ease; /* トランジション効果を追加 */
+  grid-template-columns: 1fr; /* スマートフォンでは1列レイアウト */
+  grid-template-areas: 
+  "header space__titleMain"
+  "side space__image"
+  "footer space__text";
+  @include mq(md) {
+        align-items: start; /* アイテムを上端で揃える */
+        grid-column-gap:rem(80);
+        justify-content: center;
+    }
+  }
+  .space__card:nth-child(n + 2){
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(30);
+    }
+  }
+  .space__image {
+    width: 330px; /* 画像のコンテナ幅を指定 */
+    grid-area:side;
+    margin: auto;
+    margin-top: rem(40);
+    @include mq(md) {
+      grid-row: 1 / span 3; /* 画像を縦に伸ばして、タイトルとテキスト全体にわたるように配置 */
+        margin-top: 0;
+    }
+  }
+  
+  .space__image img {
+    width: 100%; /* 画像自体の幅をコンテナに合わせる */
+    height: auto; /* 画像の高さを自動調整 */
+    transform: scale(1.1); /* 画像を10%大きくする */
+  }
+  .space__image:hover img,
+  .space__titleMain{
+    grid-area: header;
+    font-size: rem(20);
+    text-align: center;
+      @include mq(md) {
+        padding:rem(20) 0; 
+        font-size: rem(28);
+        text-align: left;
+      }
+  }
+  .space__title, .space__text {
+    display: flex;
+    flex-direction: column; /* タイトルとテキストを縦並びに */
+  }
+  .space__text{
+    grid-area: footer;
+    line-height: calc(22.5 / 15);
+    text-align: left;
+    font-size: rem(15);
+    margin-top: rem(40);
+    @include mq(md) {
+       line-height: calc(40 / 15); 
+       grid-area:unset;
+       margin-top: 0;
+    }
+  }
+  
+  .space__title, .space__text {
+    display: flex;
+    flex-direction: column; /* タイトルとテキストを縦並びに */
+  }

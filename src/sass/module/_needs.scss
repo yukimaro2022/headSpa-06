@@ -1,10 +1,11 @@
 @use "global" as *;
 
 .needs{
-    padding-bottom:rem(32);
+    padding-bottom:rem(34);
     margin-top: rem(32);
     @include mq(md) {
         padding-bottom:rem(51);
+        margin-top: rem(43);
     }
 }
 .needs__card:nth-of-type(4){
@@ -42,8 +43,13 @@
     border-radius: 40px;
 }
 .needs__card img{
-    aspect-ratio: 220 / 242;
     object-fit: cover;
     border-radius: 40px;
+    aspect-ratio: 220 / 242;
     height:rem(242);
+    max-height: 100%;
+    @include mq(md) {
+        aspect-ratio: 220 / 220;
+        height: auto;
+    }
 }

@@ -34,7 +34,7 @@
     width: 100%;
     max-width: rem(300);
     @include mq(md) {
-        margin-top: rem(12);
+        margin-top: rem(6);
     }
 }
 .cardItem__titleEn{
@@ -45,15 +45,14 @@
     @include mq(md) {
         font-size: rem(32);
         margin-right:auto;
+        line-height: .8;
     }
 }
 .cardItem__titleJa{
     font-weight: 500;
     letter-spacing: -.1em;
 }
-/* カードアイテムのスタイル */
 
-/* カードアイテムがホバーされた時の挙動 */
 .cardItem:hover figure img {
-    transform: scale(1.1); /* 画像を10%拡大 */
+    transform: scale(1.1); 
 }

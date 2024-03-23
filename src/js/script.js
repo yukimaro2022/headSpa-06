@@ -1,18 +1,18 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-    // jQuery(function(){
-    //     const swiper__top= new Swiper('.js-top-swiper', {
-    //       effect: 'fade',
-    //       direction: 'horizontal',
-    //       loop: true,
-    //       autoplay: {
-    //         delay: 3000, // ミリ秒単位で自動再生の間隔を指定
-    //       },
-    //     });
-    //   });
+    jQuery(function(){
+        const swiper__top= new Swiper('.js-top-swiper', {
+          effect: 'fade',
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 3000, // ミリ秒単位で自動再生の間隔を指定
+          },
+        });
+      });
 
     //header__right追従//
-    // document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         const headerRight = document.querySelector('.header__right');
         const offsetTop = headerRight.offsetTop;
     
@@ -25,7 +25,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         }
     
         window.addEventListener('scroll', onScroll);
-    // });
+    });
     
     // ウィンドウのリサイズイベントを監視
 window.addEventListener('resize', function() {
@@ -107,6 +107,24 @@ jQuery('.drawer__btns').on('click',function(){
   
     observer.observe(headerInner, {
       attributes: true // 属性の変更を監視
+    });
+
+
+    // flow
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.space__card').forEach(card => {
+      gsap.from(card, {
+        duration: 1, // アニメーションの持続時間
+        autoAlpha: 0, // autoAlphaを使うと、透明度の変更とvisibilityプロパティの制御を同時に行えます
+        y: 50, // 50ピクセル上から開始
+        ease: 'ease-out', // アニメーションのイージング
+        scrollTrigger: {
+          trigger: card, // この要素がビューポートに入ったらアニメーション開始
+          start: 'top 75%', // 要素の上部がビューポートの下部からどの位置でアニメーションを開始するか
+          toggleActions: 'play none none none' // スクロールの動作に応じたアニメーションの制御
+        }
+      });
     });
     
     });

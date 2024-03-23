@@ -12,19 +12,40 @@
           "text image"; /* タイトルと画像は上、テキストと画像は下 */
     }
 }
+.character__cards--reverse{
+    @include mq(md) {
+        grid-template-columns: 43% 1fr; /* 左側を40%、右側を60%に設定 */
+        grid-column-gap:rem(56);
+    }
+}
+
 .card-item:nth-child(2){
     flex-direction: row-reverse;
 }
 
 .card-item__image{
-    max-width: rem(240);
+    max-width: rem(235);
     margin:auto;
+    margin-top: rem(14);
    @include mq(md) {
     grid-area: image; /* 画像の位置 */
     justify-self: center; /* 中央寄せ */
     width: 100%; /* 幅の調整 */
     max-width: 462px; /* 最大幅の設定 */
+    margin-top: 0;
    }
+}
+.character__cards--reverse .card-item__image{
+    @include mq(md) {
+        margin-right:rem(46)
+    }
+}
+.character__card--asirai .card-item__image{
+    @include mq(md) {
+        margin-left:rem(78);
+        grid-template-columns: 1fr rem(46) 43%; /* 左側を40%、右側を60%に設定 */
+        max-width: rem(430);
+    }
 }
 .card-item__image img{
     height:auto;
@@ -32,19 +53,22 @@
 }
 .card-item__title{
     display:flex;
-    margin-top:auto;
-    justify-content: center;
+    margin:auto;
     height:100%;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     @include mq(md) {
-        grid-area: title; /* タイトルの位置 */
         justify-content: flex-start;
+        margin-left: 0;
+        grid-area: title; /* タイトルの位置 */
+        margin-top:rem(-15);
+        max-width: 100%;
     }
 }
 .card-item__titleMain{
     font-size: rem(18);
     color: #fff;
-    margin-bottom:auto;
     line-height:1.8;
     @include mq(md) {
         line-height: 1;
@@ -59,10 +83,11 @@
 }
 
 .card-item__number{
-    margin-right:min(0.86vw,1rem);
+    margin-right:rem(10);
     @include mq(md) {
         max-width: rem(80);
         height:auto;
+        margin-right:rem(18);
     }
 }
 .card-item__number img{
@@ -79,10 +104,17 @@
     font-size: rem(15);
     line-height:calc(22.5 / 15);
     color: #fff;
-    margin-top: rem(22);
+    padding:0 rem(6);
+    max-width: rem(450);
+    margin:rem(15) auto;
+    letter-spacing: .01em;
     @include mq(md) {
-        margin:0;
+        max-width: 100%;
+        margin-top:rem(-40);
         font-size: rem(16);
+        padding:0;
         grid-area: text; /* テキストの位置 */
+        padding-top: rem(10);
+        padding-left:rem(4);
     }
 }

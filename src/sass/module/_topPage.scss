@@ -1,0 +1,40 @@
+@use "global" as *;
+.topPage{
+    aspect-ratio: 500 / 200;
+    @include mq(md) {
+        aspect-ratio: 1000 / 200;
+    }
+}
+.topPage__title{
+    padding-top:rem(72);
+    padding-bottom:rem(78);
+    margin-top:rem(50);
+    text-align: center;
+}
+.topPage__title span{
+    position: relative;
+    display:inline-block;
+    padding-left:rem(90);
+}
+.topPage__title span:before{
+    content:"";
+    display:inline-block;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    background-image: url("../images//common/pc-img/space/flow-top01.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: contain;
+   position: absolute;
+    width:rem(72);
+    height:rem(103);
+}
+.topPage__titleSub{
+    position: relative;
+    color: $white;
+    @include mq(md) {
+    font-size: rem(48);
+    }
+}
+

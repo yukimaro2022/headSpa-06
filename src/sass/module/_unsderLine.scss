@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.underline-animation span{
+    display: inline-block; /* スパンをインラインブロック要素として扱う */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .underline-animation span::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* 下線の位置調整 */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #FFFAC5;
+    transform: scaleX(0); /* 横方向のスケールを0から1にアニメーション */
+    transform-origin: bottom left; /* アニメーションの起点を左下に設定 */
+    animation: underlineAnimation 7s ease forwards;
+  }
+  
+  @keyframes underlineAnimation {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  

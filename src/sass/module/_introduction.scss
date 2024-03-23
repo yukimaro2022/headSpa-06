@@ -2,10 +2,11 @@
 
 .introduction{
     position: relative;
-    padding-top:rem(24);
+    padding-top:rem(26);
     padding-bottom:rem(40);
     @include mq(md) {
-        padding-bottom:rem(84)
+        padding-bottom:rem(84);
+        padding-top:rem(34);
     }
 }
 .introduction__body iframe{
@@ -19,7 +20,7 @@
 .introduction__mainTitle{
     @include mq(md) {
         margin-bottom:auto;
-        padding-top:rem(72);  
+        padding-top:rem(64);  
     }
 }
 .introduction__title.section-title span:before{
@@ -48,28 +49,29 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* ここでマスクの色と透明度を調整 */
+    background: rgba(0, 0, 0, 0.6); 
     z-index: -1;
 }
 .introduction__wrapper{
-    margin-top: rem(31);
+    max-width: rem(450);
+    margin:rem(31) auto 0;
     @include mq(md) {
         max-width: rem(1000);
         text-align: center;
-        margin:rem(-170) auto 0;
+        margin:rem(-179) auto 0;
     }
 }
 .introduction__textArea{
-margin-top: rem(24);
+margin-top: rem(18);
     @include mq(md) {
-        margin-top: rem(48);
-        padding:0 rem(150);
+        margin-top: rem(42);
+        padding:0 rem(146);
     }
 }
 .introduction__text{
     font-size: rem(15);
     color:#fff;
-    line-height: calc(22.5 / 16);
+    line-height: 1.50625;
    @include mq(md) {
        font-size: rem(16);
    }

@@ -1,0 +1,231 @@
+@use "global" as *;
+.flow{
+    padding-top:rem(30);
+    @include mq(md) {
+        padding-bottom: rem(30);
+    }
+}
+.flow__wrapper{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(-20);
+    }
+}
+.flow__inner{
+    padding-bottom:rem(30);
+}
+/* 各カードのスタイル */
+.flow__image {
+    flex-basis: calc(33.333% - 20px); /* 3枚並べるための基本サイズ（余白を引いた値） */
+    box-sizing: border-box;
+}
+
+.flow__image:nth-child(n + 2){
+    margin-top: rem(30);
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+.flow__image img{
+    object-fit: cover;
+    width: 100%; /* コンテナの幅に合わせて伸縮 */
+    height: auto; /* 比率を保持 */
+    display: block;
+}
+/* カード内の画像スタイル */
+
+.flow__image--01{
+    @include mq(md) {
+        margin-right: rem(-30);
+    }
+}
+.flow__image--01 img{
+    aspect-ratio: 343 / 258;
+}
+.flow__image--02{
+    @include mq(md) {
+        margin-right: rem(-30);
+    }
+}
+.flow__header{
+    text-align: center;
+}
+.flow__boxTitle{
+    margin-top: rem(18);
+}
+.flow__text{
+    margin-top: rem(18);
+    @include mq(md) {
+        font-size: rem(15);
+        line-height: calc(22.5 / 15);
+    }
+}
+.flow__content{
+    margin-top: rem(32);
+    @include mq() {
+        margin-top: rem(71);
+        margin-left:rem(20);
+    }
+}
+.flow__header span{
+    position: relative;
+    padding:rem(10);
+    color: $white;
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+.flow__header span:before{
+    content:"";
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50% 50%;
+    background-color: #061C42;
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.flow__item{
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+.flow__item:nth-child(1),
+.flow__item:nth-child(2)
+{
+    position: relative;
+}
+.flow__item:nth-child(1):before,
+.flow__item:nth-child(2):before
+{
+    content: "";
+    display:inline-block;
+    background-image: url("../images/common/pc-img/flow/flow-icon.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    bottom:rem(-54);
+    height: 39px;
+    width: 30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    @include mq(md) {
+        width:rem(40);
+        height:rem(30);
+        right:unset;
+        top:unset;
+        transform: translate(-50%,-50%);
+        bottom: -60px;
+        left:50%;
+    }
+}
+.flow__btn{
+    text-align: center;
+    margin-top: rem(40);
+}
+
+
+.flow04 {
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    max-width: rem(450);
+    width: 100%;
+    margin: auto;
+    @include mq(md) {
+        max-width: 100%;
+    }
+  }
+  
+  .flow04 > li {
+    list-style-type: none;
+    width: 100%;
+    max-width: rem(277);
+    display: flex;
+  }
+  
+  .flow04 > li .icon04 {
+    line-height: 2;
+    width: rem(40);
+    height: rem(40);
+    text-align: center;
+    color: #fff;
+    background: #061C42;
+    margin: 0 auto 10px;
+    display: block;
+    border-radius: 100vh;
+    position: relative;
+  }
+  
+  .flow04 > li dl {
+    padding: 30px 20px;
+    margin: 0;
+    border: 1px solid #061C42;
+    position: relative;
+  }
+  
+  .flow04 > li:not(:first-child) dl::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    display: inline-block;
+    background-image: url("../images/common/pc-img/flow/flow-icon.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    bottom:rem(-54);
+    height: 39px;
+    width: 30px;
+    left: 50%;
+    top: calc(50% - 14px);
+    left: -45px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0deg);
+  }
+  
+  .flow04 > li dl dt {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #061C42;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .flow04 > li dl dd {
+    margin-left: 0;
+  }
+  
+  @media(max-width: 767px){
+    .flow04 {
+      gap: 20px;
+    }
+    .flow04 > li {
+      max-width: unset;
+      display: block;
+    }
+    .flow04 > li:not(:first-child) dl::before {
+      display: none;
+    }
+  }
+
+/* スマートフォン向けのスタイル調整 */
+@media (max-width: 768px) {
+   
+
+    .flow__image {
+        flex-basis: auto; /* 自動でサイズを調整 */
+    }
+}
