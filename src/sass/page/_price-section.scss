@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.price-section{
+    background-image: url("../images/common/pc-img/price/priceTop.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+}
+.price-section:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #333;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: .5;
+}

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* ビューポートの高さに合わせて調整 */
+    background-color: #061C42; /* 背景色、必要に応じて変更してください */
+    top: 0;
+    left: 0;
+    z-index: 0; /* コンテンツの背景に表示されるように調整 */
+  }

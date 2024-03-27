@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.top__button-link{
+    width: rem(35);
+    height: rem(35);
+    background-color:#061C42;
+    display: inline-block;
+    position: fixed;
+    bottom: rem(340);
+    right: 30px;
+    border-radius: 50% 50%;
+    opacity: 0;
+    @include mq(md) {
+        width: rem(63);
+        height: rem(63);
+        bottom: rem(325);
+    }
+}
+
+.top__button-link:before{
+    content:"";
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%,-50%);
+        border-left: 10px solid transparent; /* 左のボーダー */
+        border-right: 10px solid transparent; /* 右のボーダー */
+        border-bottom: 18px solid #fff; /* 上のボーダー (三角形の底辺) */
+        @include mq(md) {
+            border-left: 12px solid transparent; /* 左のボーダー */
+            border-right: 12px solid transparent; /* 右のボーダー */
+            border-bottom: 20px solid #fff; /* 上のボーダー (三角形の底辺) */
+            
+        }
+}

@@ -1,0 +1,106 @@
+@use "global" as *;
+
+
+.faq__container:nth-child(n + 2){
+    margin-top: rem(32);
+    @include mq(md) {
+        margin-top: rem(54);
+    }
+}
+.faq__question {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:rem(14) rem(20) rem(14) rem(30);
+}
+.faq__mainTitle.section-title__main{
+    @include mq(md) {
+        margin-top: rem(-100);
+    }
+}
+.faq__mark {
+    margin: 0;
+    width: 90%;
+    @include mq(md) {
+        font-size: rem(28);
+    }
+}
+.faq__text{
+    font-size: rem(16);
+    line-height: calc(22.5 / 16);
+}
+.faq__icon {
+    font-weight: bold;
+    font-size: rem(25);
+    background-color: #061C42;
+    border-radius: 50% 50%;
+    position: relative;
+    width: rem(35);
+    height: rem(35);
+    @include mq(md) {
+        width:rem(45);
+        height: rem(45);
+    }
+}
+
+.faq__icon:before{
+    content: "";
+    display:inline-block;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: rem(18);
+    height: rem(3);
+    @include mq(md) {
+        width: rem(25);
+        height: rem(3);
+    }
+}
+.faq__icon:after{
+    content: "";
+    display:inline-block;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width:rem(3);
+    height: rem(18);
+    @include mq(md) {
+        width: rem(3);
+        height: rem(25);
+    }
+}
+.faq__icon.is-active{
+  position: relative;
+}
+.faq__icon.is-active::after{
+   opacity: 0;
+}
+
+.faq__answer {
+    display: none;
+    padding-left:rem(30);
+    padding-right: rem(30);
+    padding-bottom: rem(31);
+    margin-top: rem(-10);
+    @include mq(md) {
+        max-width: rem(780); 
+    }
+}
+.faq__wrapper{
+    margin-top: rem(40);
+@include mq(md) {
+        max-width: rem(964);
+        margin: rem(-96) auto 0;
+    }
+}
+.faq__container{
+    border: 3px solid;
+    border-radius: 20px 20px;
+}

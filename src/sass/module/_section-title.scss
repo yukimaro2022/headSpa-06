@@ -24,7 +24,7 @@
 .section-title__main span{
     position: relative;
     display:inline-block;
-    padding-bottom:rem(14);
+    padding-bottom:rem(6);
     @include mq(md) {
         text-indent: rem(-45);
     }
@@ -42,7 +42,7 @@
     transform:translateX(-50%);
     @include mq(md) {
         transform:translateX(-70%);
-        bottom:rem(12);
+        width:25%;
     }
 }
 
@@ -80,4 +80,15 @@
 .section-title--white.space__title span:before
 {
     background-color:#fff;
+}
+.section-title__main--price.section-title__main{
+    @include mq(md) {
+        margin-top: rem(-96);
+    }
+   
+}
+.section__title__main--priceCare.section-title__main{
+    @include mq(md) {
+        margin-top: rem(-123);
+    }
 }

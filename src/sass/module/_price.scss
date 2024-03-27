@@ -1,0 +1,95 @@
+@use "global" as *;
+.price__wrapper{
+    margin-top: rem(40);
+    @include mq(md) {
+       margin-top: rem(-62); 
+    }
+}
+.price__body{
+    background-color: #061C42;
+    border-radius: 20px 20px;
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    padding: rem(20);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    @include mq(md) {
+        max-width: rem(420);
+        padding: rem(40) rem(30) rem(30);
+    }
+}
+/* ホバー時 */
+.price__body:hover {
+    transform: scale(1.05); /* 5%拡大 */
+    /* background-color: #eeeeee; */ /* ホバー時の背景色 */
+}
+
+
+.price__body--colorChange{
+background-color: #494219;
+}
+.price__mainTitle.section-title__main{
+    margin-top: 0;
+    @include mq(md) {
+       margin-top: rem(-56); 
+    }
+}
+.price__bodyTitle{
+    color: #ffff;
+    text-align: center;
+    font-family: $second-font-family;
+}
+.price__bodyTitle figure img{
+    width: auto;
+    margin: auto;
+    @include mq(md) {
+        height: auto;
+        max-width: rem(80);
+        margin: auto;
+    }
+}
+.price__bodyTitle figure figcaption{
+    font-size: rem(20);
+    font-weight: bold;
+    margin-top: rem(21);
+    border-bottom: 2px solid #fff;
+    @include mq(md) {
+           font-size: rem(28);
+           margin-top: rem(30);
+       }
+}
+.price__textArea{
+    color: $white;
+    height: 100%;
+    margin-top: rem(10);
+}
+
+.price__titleSub{
+    font-weight: 400;
+    letter-spacing: .01em;
+    font-size:rem(18) ;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+.price__text{
+    line-height: 1.7;
+    font-size: rem(15);
+@include mq(md) {
+        font-size: rem(15);
+    }
+}
+.price__money{
+    color: $white;
+    margin-top: rem(15);
+    font-size: rem(28);
+    text-align: center;
+    font-family: $second-font-family;
+    font-weight: bold;
+    @include mq(md) {
+        margin-top: rem(17);
+    }
+}
+.price__money--span{
+    font-size: rem(12);
+}
